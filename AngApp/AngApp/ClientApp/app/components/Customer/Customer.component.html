@@ -1,0 +1,23 @@
+<h1>Customer Information</h1>
+
+<p>This component demonstrates server.</p>
+
+<p *ngIf="!Customers"><em>Loading...</em></p>
+
+<table class='table' *ngIf="Customers">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Customer of Customers">
+            <td>{{ Customer.id }}</td>
+            <td>{{ Customer.firstName}}</td>
+            <td>{{ Customer.lastName }}</td>
+            
+        </tr>
+    </tbody>
+</table>
